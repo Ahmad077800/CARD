@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>CRUD</title>
+</head>
+<body>
+    
+    <div class="container mt-5">
+             <h1 class="alert alert-info mb-5 text-center">Ajax--php--bootstap--CRUD</h1>
+             <div class="row">  <!-- The 2 columes -->
+
+                <form class="col-sm-5" id="myform" method="post">    <!--  1nd-col => add/Insert Data (form) -->
+                    <h3 class="alert alert-success text-center">Add / Insert Data</h3>
+
+                    <div>
+                          <input type="hidden" id="stId" class="form-control">
+                          <label class="form-lable" >Name:</label>
+                          <input type="text" id="nameId" class="form-control">
+                    </div>
+                    <div>
+                          <label class="form-lable" >Email:</label>
+                          <input type="text" id="emailId" class="form-control">
+                    </div>
+                    <div>
+                          <label class="form-lable" >Password:</label>
+                          <input type="password" id="passwordId" class="form-control">
+                    </div>
+                    <div class="d-grid">
+                          <button type="submit" class="btn btn-primary mt-3" id="btnAdd">submit</button>
+                    </div>
+                    <div id="msg" class="alert alert-danger mt-3"></div>
+
+                </form>
+
+
+                      <!-- 2nd-col => show Details -->
+                <div class="col-sm-7">  
+                    <h3 class="alert alert-warning text-center"> show Details</h3>
+                       
+                    <div class="input-group">
+                        <img src="./img/icons8-search.gif" alt="img-not-added"  height="50px" >
+
+                        <input type="text" class="form-control" placeholder="search" id="mytxt" onkeyup="myfun1()">
+                    </div>
+
+                    <table class="table text-center">
+                            <thead>
+                                <th scope="col">ID</th>
+                                <th scope="col">Name</th>
+                                <th scope="col">Email</th>
+                                <th scope="col">Password</th>
+                                <th scope="col">Action</th>
+                            </thead>              
+                            <tbody id="tbody">
+                                  
+                            </tbody>
+
+                    </table>
+                </div>
+
+             </div>
+           
+
+  </div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="./js/myAjax.js"></script>
+</body>
+</html>
